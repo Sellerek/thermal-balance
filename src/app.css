@@ -1,0 +1,99 @@
+:root {
+	--bg: #0f0f0f;
+	--bg-soft: #151515;
+	--surface: #1b1b1b;
+	--surface-2: #232323;
+	--text: #f2f2ee;
+	--muted: #a3a39b;
+	--line: #2e2e2e;
+	--accent: #ffb627; /* żółć z palety termowizji */
+	--accent-ink: #0f0f0f;
+	--hot: #f2702a;
+	--cool: #6d7cff;
+
+	--font-display: 'Bricolage Grotesque Variable', system-ui, sans-serif;
+	--font-body: 'Inter Variable', system-ui, sans-serif;
+	--radius: 1rem;
+	color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font-body);
+	font-size: 1rem;
+	line-height: 1.55;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-display);
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+	margin: 0;
+	text-wrap: balance;
+}
+
+p {
+	margin: 0;
+	text-wrap: pretty;
+}
+
+a {
+	color: inherit;
+}
+
+button,
+input,
+select {
+	font: inherit;
+	color: inherit;
+}
+
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
+.card {
+	background: var(--surface);
+	border: 1px solid var(--line);
+	border-radius: calc(var(--radius) * 1.25);
+	padding: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.label {
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.num {
+	font-family: var(--font-display);
+	font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
